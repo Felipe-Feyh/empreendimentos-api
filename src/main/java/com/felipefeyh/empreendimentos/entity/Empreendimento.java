@@ -11,8 +11,7 @@ import java.util.UUID;
 public class Empreendimento {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private UUID id = UUID.randomUUID();
 
     @NotNull(message = "Nome do empreendimento é obrigatório")
     @Size(min = 3, max = 100, message = "Nome deve ter entre 3 e 100 caracteres")
