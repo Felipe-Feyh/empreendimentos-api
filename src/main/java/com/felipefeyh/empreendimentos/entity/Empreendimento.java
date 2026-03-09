@@ -3,6 +3,8 @@ package com.felipefeyh.empreendimentos.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
+
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
@@ -44,4 +46,7 @@ public class Empreendimento {
     public enum Segmento {
         TECNOLOGIA, COMERCIO, INDUSTRIA, SERVICOS, AGRONEGOCIO
     }
+
+    @Column(name = "data_cadastro")
+    private LocalDateTime dataCadastro = LocalDateTime.now();
 }
